@@ -1,0 +1,78 @@
+
+    
+<div>
+    <app-toolbar></app-toolbar>
+    <mat-grid-list [cols]="3" rowHeight="420px" style="padding: 50px;">
+        
+        <mat-grid-tile [colspan]="3" rowspan="2">
+            <app-card>
+                <mat-grid-tile-header>Jobs</mat-grid-tile-header>
+                <div>
+                    <table>
+                        <tr style="font-size: large;color: rgb(7, 90, 163);">
+                            <td>
+                                Job Id
+                            </td>
+                            <td>
+                                Job Role
+                            </td>
+                            <!-- <td>
+                                Job Description
+                            </td> -->
+                            <td>
+                                Organisation 
+                            </td>
+                            <td>
+                                Location
+                            </td>
+                            <td>
+                                Date
+                            </td>
+                            <!-- <td>
+                               Required Skills
+                            </td> -->
+                        </tr>
+                        <tr *ngFor="let job of jobs;index as i" style="color: black;">
+                            <td>
+                                {{job[0]}}
+                            </td>
+                            <td>
+                               {{job[1]}}
+                            </td>
+                            <!-- <td>
+                                {{job[2]}}
+                            </td> -->
+                            <td>
+                                {{job[3]}}
+                            </td>
+                            <td>
+                               {{job[4]}}
+                            </td>
+                            <td>
+                                {{job[5]}}
+                            </td>
+                            <!-- <td>
+                                {{job[6]}}
+                            </td> -->
+                            <td>
+                                <div class="imgwrap">
+                                <button  mat-raised-button color="accent" (click)="openDialog1(i)">
+                                  Apply
+                                </button>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="imgwrap">
+                                  <button  mat-raised-button color="accent" (click)="openDialog()">
+                                    Applicants
+                                  </button>
+                                </div>
+                              </td>
+                        </tr>
+                    </table>
+                </div>
+            </app-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+    
+</div>

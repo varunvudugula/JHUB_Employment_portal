@@ -1,0 +1,89 @@
+<div>
+  <app-toolbar></app-toolbar>
+    <mat-grid-list [cols]="3" rowHeight="420px" style="padding: 50px;">
+        <mat-grid-tile [colspan]="3" rowspan="2">
+            <app-card>
+                <mat-grid-tile-header>
+                    POST A JOB
+                </mat-grid-tile-header>
+                    <table style="color: black;margin: auto;">
+                          <tr>
+                            <td>
+                              <label>Job Role</label>
+                            </td>
+                            <td>
+                              :
+                            </td>
+                            <td>
+                              <input type="text"size="40px" required  name="Job Role"  #name="ngModel"   class="form-control" [(ngModel)]="jobsmodel.jobrole" placeholder="Enter Job Role">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <label>Organisation</label>
+                            </td>
+                            <td>
+                              :
+                            </td>
+                            <td>
+                              <input type="text" id="organisation" name="organisation"  size="40px" width="80px" required  name="organisation" #name="ngModel" class="form-control" [(ngModel)]="jobsmodel.organisation" placeholder="Enter organisation name">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label>Job Description</label>
+                            </td>
+                            <td>
+                              :
+                            </td>
+                            <td>
+                              <textarea required  name="Description" cols="40" rows="5" #name="ngModel" class="form-control" [(ngModel)]="jobsmodel.description" placeholder="Enter Job Description"></textarea>
+                            </td>
+                          </tr>
+                          
+                          
+                          <tr>
+                            <td>
+                              <label>Location</label>
+                            </td>
+                            <td>
+                              :
+                            </td>
+                            <td>
+                              <input type="text" id="Location" name="location"  size="40px" width="80px" required  name="location" #name="ngModel" class="form-control" [(ngModel)]="jobsmodel.location" placeholder="Enter organisation location">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label>Date</label>
+                            </td>
+                            <td>
+                              :
+                            </td>
+                            <td>
+                              <input type="date"size="40px" required  name="date" #name="ngModel"  class="form-control" [(ngModel)]="jobsmodel.date" placeholder="Enter date">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label>Skills</label>
+                            </td>
+                            <td>
+                              :
+                            </td>
+                            <td>
+                              <mat-form-field appearance="fill" color="accent" style="width: 310px;">
+                                <label>Select skills</label>
+                                <mat-select  [formControl]="selectedskills" multiple>
+                                  <mat-option style="color:black" *ngFor="let skill of skills" [value]="skill">{{skill}}</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                             </td> 
+                          </tr>
+                    </table>
+                    <button style="height: 40px;width:80px;margin-left:auto ;margin-right: auto;margin-bottom: 15%;" (click)="logger()">submit</button>
+            </app-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

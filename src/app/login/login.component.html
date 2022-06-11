@@ -1,0 +1,44 @@
+<div>
+<div style="text-align: center;color: #000;">
+     <div>
+        <mat-card style="height: 390px; width: 500px;">
+            <mat-card-header>
+                <mat-card-title style="margin-top:5px ;">Login Here</mat-card-title>
+            </mat-card-header>
+           <form #userForm="ngForm">
+               <table style="margin-top: 8%;color: black;">
+                   <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="text" placeholder="Enter username" #name="ngModel" required  name="name"  class="form-control" [(ngModel)]="userModel.name"></td>
+                   </tr>
+                   <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><input type="password" placeholder="Enter Password" #pswd="ngModel" required  name="pswd"  class="form-control" [(ngModel)]="userModel.pswd"></td>
+                   </tr>
+                   <tr>
+                    <td>
+                      Login as
+                   </td>
+                   <td>
+                       :
+                   </td>
+                       <td>
+                    <mat-radio-group aria-label="Select an option" color="primary" required name="mode" [(ngModel)]="userModel.mode">
+                        <mat-radio-button value="recruiter">Recruiter</mat-radio-button>
+                        <mat-radio-button value="student" style="margin-left: 10px;margin-top: 5px;">Student</mat-radio-button>
+                      </mat-radio-group>  
+                      </td>
+                   </tr>
+               </table>
+           </form>
+           <br>
+           <button mat-raised-button  class="login" (click)="login()">Login</button>
+           <br>
+           <br>
+           <p class="register">New User? <a routerLink="/register">Register</a> </p>
+        </mat-card>
+    </div>
+    </div>
+</div>

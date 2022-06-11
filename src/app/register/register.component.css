@@ -1,0 +1,42 @@
+.mat-grid-tile .mat-grid-tile-header, .mat-grid-tile .mat-grid-tile-footer {
+    background: #04397b !important;
+    font-weight: bold;
+    font-size: 15px;
+}
+.mat-tab-label{
+    color: #060404 !important;
+}
+label{
+    padding-right: 15px;
+    float: left;
+}
+td{
+    padding-right: 10px;
+    padding-bottom: 20px;
+    height: 30px;
+}
+form{
+    align-self: center;
+}
+input{
+    text-align: center;
+}
+/* ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 5px;
+  } */
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white;
+   padding: 0px; 
+   color: #060404;
+}
+.mat-form-field {
+    line-height: 0.002;
+}
+table{
+    align-items: left;
+}
+.mat-form-field-appearance-fill .mat-form-field-infix {
+     padding: 0; 
+}
+

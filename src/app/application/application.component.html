@@ -1,0 +1,59 @@
+<div>
+    <app-toolbar></app-toolbar>
+    <mat-grid-list [cols]="3" rowHeight="420px" style="padding: 50px;">
+        
+        <mat-grid-tile [colspan]="3" rowspan="2">
+            <app-card>
+                <mat-grid-tile-header>Applicants</mat-grid-tile-header>
+                <div>
+                    <table>
+                        <tr style="font-size: large;color: rgb(7, 90, 163);">
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                email
+                            </td>
+                            <td>
+                                College
+                            </td>
+                            <td>
+                                CGPA
+                            </td>
+                            <td>
+                                Profile Match
+                            </td>
+                            <!-- <td>
+                               Required Skills
+                            </td> -->
+                        </tr>
+                        <tr *ngFor="let candidate of applicants;index as i" style="color: black;">
+                            <td>
+                                {{candidate.name}}
+                            </td>
+                            <td>
+                               {{candidate.email}}
+                            </td>
+                            <td>
+                                {{candidate.college}}
+                            </td>
+                            <td>
+                               {{candidate.Cgpa}}
+                            </td>
+                            <td>
+                                {{candidate.profileMatch}}
+                            </td>
+                            <td>
+                                <div class="imgwrap">
+                                <button  mat-raised-button color="accent">
+                                  Open Profile
+                                </button>
+                                </div>
+                              </td>
+                        </tr> 
+                    </table>
+                </div>
+            </app-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

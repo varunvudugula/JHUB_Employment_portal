@@ -1,0 +1,20 @@
+.mat-grid-tile .mat-grid-tile-header, .mat-grid-tile .mat-grid-tile-footer {
+    background: #04397b !important;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+td{
+    padding-bottom: 20px;
+    height: 30px;
+    text-align: left;
+}
+form{
+    align-self: center;
+}
+input{
+    text-align: center;
+}
+
+
+
